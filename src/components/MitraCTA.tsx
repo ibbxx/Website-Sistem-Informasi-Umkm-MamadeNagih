@@ -12,7 +12,7 @@ const MitraCTA = () => {
             Jangan tunda peluang usahamu. Bergabunglah bersama Mamade Nagih dan
             mulai langkah bisnismu hari ini.
           </p>
-          <Button asChild variant="hero" size="xl">
+          <Button asChild variant="hero" size="xl" className="whitespace-normal h-auto py-4 px-6 sm:px-10 text-base sm:text-xl">
             <a
               href="https://wa.me/6285757051063"
               target="_blank"
