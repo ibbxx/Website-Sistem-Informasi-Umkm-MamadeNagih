@@ -5,7 +5,7 @@ const pricingTiers = [
   {
     name: "Reseller",
     minOrder: "10 pcs",
-    price: "Rp113.500",
+    price: "Rp135.000",
     pricePerPcs: "/ pcs",
     description: "Cocok untuk pemula dan penjualan skala kecil, baik online maupun offline.",
     highlight: false,
@@ -60,11 +60,10 @@ const PricingSection = () => {
           {pricingTiers.map((tier, index) => (
             <div
               key={tier.name}
-              className={`relative rounded-2xl p-6 md:p-8 animate-fade-in ${
-                tier.highlight
-                  ? "bg-secondary text-secondary-foreground shadow-xl scale-105"
-                  : "bg-card text-foreground shadow-lg"
-              }`}
+              className={`relative rounded-2xl p-6 md:p-8 animate-fade-in ${tier.highlight
+                ? "bg-secondary text-secondary-foreground shadow-xl scale-105"
+                : "bg-card text-foreground shadow-lg"
+                }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {tier.highlight && (
@@ -77,11 +76,10 @@ const PricingSection = () => {
                   {tier.name}
                 </h3>
                 <p
-                  className={`text-sm mb-4 ${
-                    tier.highlight
-                      ? "text-secondary-foreground/80"
-                      : "text-muted-foreground"
-                  }`}
+                  className={`text-sm mb-4 ${tier.highlight
+                    ? "text-secondary-foreground/80"
+                    : "text-muted-foreground"
+                    }`}
                 >
                   Min. order: {tier.minOrder}
                 </p>
@@ -90,11 +88,10 @@ const PricingSection = () => {
                     {tier.price}
                   </span>
                   <span
-                    className={`text-sm ${
-                      tier.highlight
-                        ? "text-secondary-foreground/80"
-                        : "text-muted-foreground"
-                    }`}
+                    className={`text-sm ${tier.highlight
+                      ? "text-secondary-foreground/80"
+                      : "text-muted-foreground"
+                      }`}
                   >
                     {tier.pricePerPcs}
                   </span>
@@ -102,11 +99,10 @@ const PricingSection = () => {
               </div>
 
               <p
-                className={`text-sm mb-6 text-center ${
-                  tier.highlight
-                    ? "text-secondary-foreground/80"
-                    : "text-muted-foreground"
-                }`}
+                className={`text-sm mb-6 text-center ${tier.highlight
+                  ? "text-secondary-foreground/80"
+                  : "text-muted-foreground"
+                  }`}
               >
                 {tier.description}
               </p>
@@ -115,16 +111,14 @@ const PricingSection = () => {
                 {tier.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
                     <div
-                      className={`w-5 h-5 rounded-full flex items-center justify-center ${
-                        tier.highlight ? "bg-primary" : "bg-primary/20"
-                      }`}
+                      className={`w-5 h-5 rounded-full flex items-center justify-center ${tier.highlight ? "bg-primary" : "bg-primary/20"
+                        }`}
                     >
                       <Check
-                        className={`w-3 h-3 ${
-                          tier.highlight
-                            ? "text-primary-foreground"
-                            : "text-primary"
-                        }`}
+                        className={`w-3 h-3 ${tier.highlight
+                          ? "text-primary-foreground"
+                          : "text-primary"
+                          }`}
                       />
                     </div>
                     <span className="text-sm">{feature}</span>
